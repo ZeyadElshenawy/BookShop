@@ -1,0 +1,106 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+}
+
+.main {
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+    background: url("books-1204029_1280.jpg") no-repeat center;
+    box-shadow: 5px 20px 50px #000000;
+}
+
+#chk {
+    display: none;
+}
+
+.login {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #0f0c29;
+}
+
+.signup {
+    height: 460px;
+    color: #24243e;
+    background: #eee;
+    border-radius: 60% / 10%;
+    transform: translateY(-180px);
+    transition: .8s;
+    cursor: pointer;
+}
+
+label {
+    color: #193e83;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+input {
+    width: 60%;
+    height: 20px;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+button {
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: #24243e;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3333aa;
+}
+
+#link {
+    color: rgb(255, 255, 255);
+    display: block;
+    text-align: center;
+}
+
+#link:hover {
+    text-decoration: none;
+}
+
+#chk:checked ~ .signup {
+    transform: translateY(-500px);
+}
+
+#chk:checked ~ .signup label {
+    transform: scale(1);   
+}
+
+#chk:checked ~ .signup label {
+    transform: scale(.6);
+}
+
+ 

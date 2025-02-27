@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylee for products.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Book Details</title>
+    <style>
+        :root {
+            --green: #171770;
+            --dark-color: #dbc836;
+            --black: #444;
+            --light-color: #666;
+            --border: .1rem solid rgba(0, 0, 0, .1);
+            --border-hover: .1rem solid var(--black);
+            --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .icons {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .cart-icon {
+            position: relative;
+            font-size: 24px;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        #cart-zero {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+        }
+
+        .sidebar {
+            width: 300px;
+            height: 95%;
+            position: fixed;
+            top: 0;
+            right: -400px;
+            background-color: white;
+            box-shadow: -4px 0 6px rgba(0, 0, 0, .1);
+            transition: right 0.3s ease-in-out;
+            z-index: 1000;
+            padding: 20px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+        .sidebar.open {
+            right: 0;
+        }
+
+        .sidebar-close {
+            position: absolute;
+            right: 20px;
+            font-size: large;
+            top: 10px;
+            cursor: pointer;
+        }
+
+        .cart-items {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+
+        .individual-cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 5px;
+            border-radius: 5px;
+            color: var(--light-color);
+            border: 1px solid var(--black);
+        }
+
+        .cart-item-price {
+            color: var(--light-color);
+        }
+
+        .sidebar--footer {
+            position: absolute;
+            bottom: 10px;
+            width: 88%;
+        }
+
+        .total--amount {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 2px solid var(--black);
+            border-radius: 5px;
+            padding: 15px 10px;
+        }
+
+        .cart-total {
+            font-size: 16px;
+            color: var(--black);
+            font-weight: 500;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            margin-top: 2rem;
+            background: var(--green);
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .checkout-btn:hover {
+            background-color: rgb(220, 196, 13);
+        }
+
+        .remove-item {
+            background: darkblue;
+            color: rgb(22, 11, 149);
+            border-radius: 5px;
+            padding: 2px 8px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        .icons .fas {
+            font-size: 2.5rem;
+            margin-left: 1.5rem;
+            color: rgb(35, 11, 220);
+            cursor: pointer;
+        }
+        .icons .fas:hover{
+            color: #dbc836;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="icons">
+        <a class="cart-icon" id="cccc"><i class="fas fa-shopping-cart"></i><span id="cart-zero">0</span></a>
+    </div>
+
+    <div class="container1">
+        <div class="title">BOOKS DETAILS</div>
+        <div class="details">
+            <div class="image">
+                <img src="1.jpg" id="aa">
+            </div>
+            <div class="content">
+                <h1 id="name">Harry Potter and the Philosopher's Stone</h1>
+                <div class="price"><strong>200$</strong></div>
+                <div id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam neque vitae
+                    dignissimos dolorem illo suscipit. Adipisci rem vero id, corrupti voluptas esse labore nisi culpa,
+                    quibusdam corporis molestias doloribus laudantium..</div>
+                <div class="button">
+                    <button id="btn1" style="background-color: rgb(71, 66, 66);">Check Out</button>
+                    <button id="btn2" class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="Listproducts1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <button onclick="changeTextAndImage('Harry Potter and the Philosophers Stone', '1.jpg')">
+                        <img id="myImage" src="1.jpg">
+                    </button>
+                    </a>
+                    <br>
+                    <p>Harry Potter and the Philosopher's Stone</p><br>
+                </div>
+                <div class="swiper-slide">
+                    <button onclick="changeTextAndImage('harry potter and the <br> chamber of secrets', '2.jpg')">
+                        <img id="myImage" src="2.jpg">
+                    </button>
+                    </a>
+                    <br>
+                    <p>harry potter and the <br> chamber of secrets</p><br>
+                </div>
+                <div class="swiper-slide">
+                    <button onclick="changeTextAndImage('harry potter and the <br> prisoner of azkaban', '3.jpg')">
+                        <img id="myImage" src="3.jpg">
+                    </button>
+                    </a>
+                    <br>
+                    <p>harry potter and the <br> prisoner of azkaban</p><br>
+                </div>
+                <div class="swiper-slide">
+                    <button onclick="changeTextAndImage('Harry Potter and the <br> Goblet of Fire', '4.jpg')">
+                        <img id="myImage" src="4.jpg">
+                    </button>
+                    </a>
+                    <br>
+                    <p>Harry Potter and the <br> Goblet of Fire</p><br>
+                </div>
+                <div class="swiper-slide">
+                    <button onclick="changeTextAndImage('Harry Potter and the <br>Order of the Phoenix', '5.jpg')">
+                        <img id="myImage" src="5.jpg">
+                    </button>
+                    </a>
+                    <br>
+                    <p>Harry Potter and the <br>Order of the Phoenix</p><br>
+                </div>
+                <div class="swiper-slide">
+                    <button onclick="changeTextAndImage('Harry Potter and the <br> Half-Blood Prince', '6.jpg')">
+                        <img id="myImage" src="6.jpg">
+                    </button>
+                    </a>
+                    <br>
+                    <p>Harry Potter and the <br> Half-Blood Prince</p><br>
+                </div>
+                <div class="swiper-slide">
+                    <button onclick="changeTextAndImage('Harry Potter and the <br> Deathly Hallows','7.jpg')">
+                        <img id="myImage" src="7.jpg">
+                    </button>
+                    </a>
+                    <br>
+                    <p>Harry Potter and the <br> Deathly Hallows</p><br>
+                </div>
+                <div class="swiper-slide">
+                    <button onclick="changeTextAndImage('Crime and Punishment',  '20.webp')">
+                        <img id="myImage" src="20.webp">
+                    </button>
+                    </a>
+                    <p><strong>Crime and Punishment</strong></p><br>
+                </div>
+                <div class="swiper-slide">
+                    <button onclick="changeTextAndImage('Les Miserables',  '8.png')">
+                        <img id="myImage" src="8.png">
+                    </button>
+                    </a>
+                    <br>
+                    <p>الشيخ باسم</p><br>
+                </div>
+                <div class="swiper-slide">
+                    <button onclick="changeTextAndImage('The Merchant of Venice', '10.jpg')">
+                        <img id="myImage" src="10.jpg">
+                    </button>
+                    </a>
+                    <br>
+                    <p>The Merchant of Venice</p><br>
+                </div>
+                <div class="swiper-slide">
+                    <button onclick="changeTextAndImage('The Idiot',  '11.jpg')">
+                        <img id="myImage" src="11.jpg">
+                    </button>
+                    </a>
+                    <br>
+                    <p>The Idiot</p><br>
+                </div>
+                <div class="swiper-slide">
+                    <button onclick="changeTextAndImage('The Da Vinci Code',  '12.jpg')">
+                        <img id="myImage" src="12.jpg">
+                    </button>
+                    </a>
+                    <br>
+                    <p>The Da Vinci Code</p><br>
+                </div>
+                <div class="swiper-slide">
+                    <button onclick="changeTextAndImage('The Secret Garden',  '13.jpg')">
+                        <img id="myImage" src="13.jpg">
+                    </button>
+                    </a>
+                    <br>
+                    <p>The Secret Garden</p><br>
+                </div>
+                <div class="swiper-slide">
+                    <button onclick="changeTextAndImage('Animal Farm',  '14.jpg')">
+                        <img id="myImage" src="14.jpg">
+                    </button>
+                    </a>
+                    <br>
+                    <p>Animal Farm </p><br>
+                </div>
+                <div class="swiper-slide">
+                    <button onclick="changeTextAndImage('1984',  '15.jpg')">
+                        <img id="myImage" src="15.jpg">
+                    </button>
+                    </a>
+                    <br>
+                    <p>1984</p><br>
+                    <p>200$</p>
+                </div>
+                <div class="swiper-slide">
+                    <button onclick="changeTextAndImage('vagabond',  '16.jpg')">
+                        <img id="myImage" src="16.jpg">
+                    </button>
+                    </a>
+                    <p>vagabond</p><br>
+                    <p>200$</p>
+                </div>
+                <div class="swiper-slide">
+                    <button onclick="changeTextAndImage('slam dunk', '17.jpg')">
+                        <img id="myImage" src="17.jpg">
+                    </button>
+                    </a>
+                    <br>
+                    <p>slam dunk</p><br>
+                </div>
+                <div class="swiper-slide">
+                    <button onclick="changeTextAndImage('Billy Bat', '18.jpg')">
+                        <img id="myImage" src="18.jpg">
+                    </button>
+                    </a>
+                    <br>
+                    <p>Billy Bat</p><br>
+                </div>
+                <div class="swiper-slide">
+                    <button onclick="changeTextAndImage('to kill a mockingbird',  '19.jpg')">
+                        <img id="myImage" src="19.jpg">
+                    </button>
+                    </a>
+                    <br>
+                    <p>to kill a mockingbird</p><br>
+                </div>
+                <div class="swiper-slide">
+                    <button onclick="changeTextAndImage('the science of interstellar','the science of interstellar.jpg')">
+                        <img id="myImage" src="the science of interstellar.jpg">
+                    </button>
+                    </a>
+                    <br>
+                    <p>the science of interstellar</p><br>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <!--cart sidebar section starts-->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-close"><i class="fa-solid fa-close"></i></div>
+        <div class="cart-menu">
+            <h3>My Cart</h3>
+            <div class="cart-items"></div>
+        </div>
+        <div class="sidebar--footer">
+            <div class="total--amount">
+                <h5>Total</h5>
+                <div class="cart-total">$0.00</div>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            const cartItemCount = document.querySelector('#cart-zero');
+            const cartItemsList = document.querySelector('.cart-items');
+            const cartTotal = document.querySelector('.cart-total');
+            const cartIcon = document.querySelector('.cart-icon');
+            const sidebar = document.getElementById('sidebar');
+            const closeButton = document.querySelector('.sidebar-close');
+
+            let cartItems = [];
+            let totalAmount = 0;
+
+            addToCartButtons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    const itemName = document.querySelector('.content h1').textContent;
+                    const itemPrice = parseFloat(document.querySelector('.price strong').textContent.slice(1));
+
+                    const item = {
+                        name: itemName,
+                        price: itemPrice,
+                        quantity: 1,
+                    };
+
+                    const existingItem = cartItems.find((cartItem) => cartItem.name === item.name);
+                    if (existingItem) {
+                        existingItem.quantity++;
+                    } else {
+                        cartItems.push(item);
+                    }
+                    totalAmount += item.price;
+                    updateCartUI();
+                });
+            });
+
+            function updateCartUI() {
+                updateCartItemCount(cartItems.length);
+                updateCartItemList();
+                updateCartTotal();
+            }
+
+            function updateCartItemCount(count) {
+                cartItemCount.textContent = count;
+            }
+
+            function updateCartItemList() {
+                cartItemsList.innerHTML = '';
+                cartItems.forEach((item, index) => {
+                    const cartItem = document.createElement('div');
+                    cartItem.classList.add('individual-cart-item');
+                    cartItem.innerHTML = `
+                        <span>(${item.quantity}x) ${item.name}</span>
+                        <span class="cart-item-price">$${(item.price * item.quantity).toFixed(2)}</span>
+                        <button class="remove-item" data-index="${index}">Remove</button>
+                    `;
+                    cartItemsList.appendChild(cartItem);
+                });
+
+                const removeButtons = document.querySelectorAll('.remove-item');
+                removeButtons.forEach((button) => {
+                    button.addEventListener('click', (event) => {
+                        const index = event.target.dataset.index;
+                        removeItemFromCart(index);
+                    });
+                });
+            }
+
+            function removeItemFromCart(index) {
+                const item = cartItems[index];
+                totalAmount -= item.price * item.quantity;
+                cartItems.splice(index, 1);
+                updateCartUI();
+            }
+
+            function updateCartTotal() {
+                cartTotal.textContent = `$${totalAmount.toFixed(2)}`;
+            }
+
+            cartIcon.addEventListener('click', () => {
+                sidebar.classList.toggle('open');
+            });
+
+            closeButton.addEventListener('click', () => {
+                sidebar.classList.remove('open');
+            });
+        });
+
+
+        function changeTextAndImage(title, imageName) {
+            var messageParagraph = document.getElementById("name");
+            var imgElement = document.getElementById("aa");
+
+            messageParagraph.innerHTML = `<strong>${title}</strong>`;
+            imgElement.src = `${imageName}`;
+        }
+
+        const swiper = new Swiper('.Listproducts1', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            slidesPerView: 1,
+            spaceBetween: 3,
+            breakpoints: {
+                320: {
+                    slidesPerView: 2,
+                    spaceBetween: 3
+                },
+                480: {
+                    slidesPerView: 3,
+                    spaceBetween: 2
+                },
+                640: {
+                    slidesPerView: 4,
+                    spaceBetween: 2
+                }
+            }
+        });
+
+    </script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+</body>
+
+</html>

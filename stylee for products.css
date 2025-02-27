@@ -1,0 +1,106 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container1{
+    width: 900px;
+    height: 600px;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+}
+.container1>.title{
+    font-size: xx-large;
+    text-shadow: 0 2px 2px rgb(255, 255, 255);
+    padding: 20px 0;
+}
+
+.container1>.details{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border-radius: 0;
+}
+
+#name{
+    width: 450px;
+    height: 80px;
+    background-color: rgb(48, 45, 45);
+    font-size: xx-large;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+    padding: 20px 0
+}
+
+#description{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ; 
+    padding-bottom: 10px;
+    width: 500px;
+    height: 200px;
+}
+
+.container1>.details>.image img{
+    width: 275px; 
+    height:400px ;
+    display: flex; 
+    filter: drop-shadow(-15px 50px 30px rgba(63, 60, 60, 0.8));
+}
+.container1>.details>.content>.price{
+   padding-bottom: 20px;
+}
+button{    
+    border: 0;
+}
+.container1>.details>.content>.button button {
+    background-color: rgb(104, 212, 104);
+    padding: 15px 32px;
+    margin-top:30px ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius:30px ;
+    box-shadow: 10px 20px 50px rgba(46, 45, 45, 0.5);
+    width:200px ;
+    
+}
+
+.container1>.details>.content>.button button:hover{
+    transform: scale(1.1);
+}
+#myImage{
+    width: 10pc;
+    height: 15pc;
+    cursor: grab;
+    filter: drop-shadow(-15px 50px 30px rgba(36, 35, 35, 0.8));
+}
+
+.container1>.details>.content{
+    padding-bottom: 60px;
+}
+
+.container1>.Listproducts1{
+max-width: 11500px;
+width: 100%;
+background-color: rgb(255, 255, 255);
+overflow: hidden;
+
+}
+.swiper-slide{
+    width: 210px;
+    height: 260px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding-top: 20px;
+}
+.swiper-button-prev,.swiper-button-next{
+    width: 40px;
+    padding-left:110px;
+    padding-right:110px;
+    padding-top:400px ;
+
+}
