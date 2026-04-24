@@ -2,7 +2,7 @@
 
 A static bookstore landing page — HTML/CSS/JavaScript front-end with a Swiper-based book carousel, responsive layout, a client-side cart, and a demo login/signup page.
 
-Forked from [mohaaHeiba/BookShop](https://github.com/mohaaHeiba/BookShop) and cleaned up: filenames normalized (no spaces, no weird casing), broken references fixed, `showMore()` toggle fixed, duplicate `window.onload` removed, and the third-party signup endpoint that was exposing names/emails/plaintext passwords to a public Google Sheet was removed.
+CoCreated with And Forked from [mohaaHeiba/BookShop](https://github.com/mohaaHeiba/BookShop) and cleaned up: filenames normalized (no spaces, no weird casing), broken references fixed, `showMore()` toggle fixed, duplicate `window.onload` removed, and the third-party signup endpoint that was exposing names/emails/plaintext passwords to a public Google Sheet was removed.
 
 ## Pages
 
