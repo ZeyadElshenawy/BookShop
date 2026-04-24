@@ -10,6 +10,26 @@ Forked from [mohaaHeiba/BookShop](https://github.com/mohaaHeiba/BookShop) and cl
 - `product-details.html` — book details view with a thumbnail carousel
 - `login.html` — login / signup UI (demo only; no backend wired up)
 
+## Project structure
+
+```
+BookShop/
+├── index.html
+├── product-details.html
+├── login.html
+├── css/
+│   ├── style.css              # home + shared
+│   ├── product-details.css
+│   └── login.css
+├── js/
+│   └── script.js              # search toggle, cart, loader, Swiper init
+└── images/
+    ├── books/                 # book covers + interstellar/OIP
+    ├── reviews/               # review avatars
+    ├── bg/                    # section backgrounds
+    └── ui/                    # loader, decorative GIFs
+```
+
 ## Stack
 
 - HTML, CSS, vanilla JavaScript (no build step)

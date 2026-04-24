@@ -239,7 +239,7 @@ section {
 
 
 .home {
-    background: url(baner.jpeg) no-repeat ;
+    background: url(../images/bg/baner.jpeg) no-repeat ;
     background-size: cover;
     background-position: center;
 
@@ -482,7 +482,7 @@ transform: translateY(0%);
 /* newsletter section*/
 
 .newsletter {
-    background: url(newsletter.png) no-repeat;
+    background: url(../images/bg/newsletter.png) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

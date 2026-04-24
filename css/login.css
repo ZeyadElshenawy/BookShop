@@ -13,7 +13,7 @@ body {
     width: 400px;
     height: 500px;
     overflow: hidden;
-    background: url("books-1204029_1280.jpg") no-repeat center;
+    background: url("../images/bg/books-1204029_1280.jpg") no-repeat center;
     box-shadow: 5px 20px 50px #000000;
 }
 
