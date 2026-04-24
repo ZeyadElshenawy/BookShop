@@ -1198,10 +1198,6 @@ textarea.input {
 
 
 
-body{
-    height: 300rem;
-}
-
 /* media queries*/
 @media (max-width:991px){
     html {

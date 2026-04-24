@@ -1,0 +1,26 @@
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs
+*.log
+
+# Node (if tooling is added later)
+node_modules/
+npm-debug.log*
+
+# Build
+dist/
+build/
+
+# Env
+.env
+.env.local
+.env.*.local
