@@ -4,6 +4,23 @@ A static bookstore landing page — HTML/CSS/JavaScript front-end with a Swiper-
 
 CoCreated with And Forked from [mohaaHeiba/BookShop](https://github.com/mohaaHeiba/BookShop) and cleaned up: filenames normalized (no spaces, no weird casing), broken references fixed, `showMore()` toggle fixed, duplicate `window.onload` removed, and the third-party signup endpoint that was exposing names/emails/plaintext passwords to a public Google Sheet was removed.
 
+## 📸 Screenshots
+
+### Home
+<img src="screenshots/home.png" alt="Home page" width="900"/>
+
+### Deal of the day
+<img src="screenshots/deal-of-the-day.png" alt="Deal of the day" width="900"/>
+
+### Client reviews
+<img src="screenshots/client-reviews.png" alt="Client reviews carousel" width="900"/>
+
+### Contact us
+<img src="screenshots/contact-us.png" alt="Contact us" width="900"/>
+
+### Login &amp; Sign up
+<img src="screenshots/login.png" alt="Login" width="440"/> <img src="screenshots/signup.png" alt="Sign up" width="440"/>
+
 ## Pages
 
 - `index.html` — home (header, book slider, collection, newsletter, deal, reviews, contact, footer)
@@ -23,11 +40,12 @@ BookShop/
 │   └── login.css
 ├── js/
 │   └── script.js              # search toggle, cart, loader, Swiper init
-└── images/
-    ├── books/                 # book covers + interstellar/OIP
-    ├── reviews/               # review avatars
-    ├── bg/                    # section backgrounds
-    └── ui/                    # loader, decorative GIFs
+├── images/
+│   ├── books/                 # book covers + interstellar/OIP
+│   ├── reviews/               # review avatars
+│   ├── bg/                    # section backgrounds
+│   └── ui/                    # loader, decorative GIFs
+└── screenshots/               # UI screenshots (referenced in README)
 ```
 
 ## Stack
